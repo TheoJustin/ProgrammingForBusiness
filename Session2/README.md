@@ -13,3 +13,11 @@ HTML Form
 | `<thead>` | Kepala tabel                   |
 | `<tbody>` | Isi tabel                      |
 | `<tfoot>` | Bagian bawah (footer) tabel    |
+
+
+| Atribut   | Fungsi                                                 |
+| --------- | ------------------------------------------------------ |
+| `action`  | Alamat tujuan saat form dikirim                        |
+| `method`  | Metode pengiriman (`get` atau `post`)                  |
+| `target`  | Dimana hasil akan ditampilkan (`_self`, `_blank`, dll) |
+| `enctype` | Tipe encoding data (penting saat upload file)          |
