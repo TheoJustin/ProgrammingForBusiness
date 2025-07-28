@@ -1,0 +1,115 @@
+CREATE TABLE students (
+	id int,
+    name varchar(255),
+    gpa decimal(10,2), 
+ 	joined date
+)
+
+INSERT INTO STUDENTS VALUES (1, "Rafael", 4.0, "2022-03-03");
+
+ALTER TABLE students ADD COLUMN last_name TEXT;
+ALTER TABLE students
+CHANGE last_name first_name TEXT;
+ALTER TABLE students DROP COLUMN first_name
+
+INSERT INTO STUDENTS VALUES (2, "Nicholas", 2.0, "2022-03-04");
+
+SELECT *
+FROM students
+WHERE id=1
+
+// ^ -> start of an anchor
+// $ -> end of an anchor
+// [chars-chars, nums-nums] -> only those are allowed to pop up
+// {nums} -> multiplication of a regular expression
+
+CREATE TABLE contacts (
+	id int,
+	student_id int,
+	phone VARCHAR(20),
+  CHECK (phone REGEXP '^[0-9]{10}$')
+)
+
+// + -> at least one character beside or more
+// * -> zero on a character beside or more
+// _ -> a character up to you
+// % -> zero or more character up to you
+INSERT INTO students VALUES (3, "911", 0.0, "2000-01-01");
+SELECT * FROM STUDENTS WHERE name REGEXP '[0-9]+'
+SELECT * FROM STUDENTS WHERE name REGEXP '[0-9]*'
+SELECT * FROM students WHERE name LIKE 'Ra%'
+SELECT * FROM students WHERE name LIKE 'Ra_'
+SELECT * FROM students WHERE name LIKE 'Ra_%'
+
+
+UPDATE students
+SET name="Rafa"
+WHERE name LIKE "Rafael"
+
+DELETE FROM students WHERE name = "911"
+
+
+CREATE TABLE lecturer (
+	id int PRIMARY KEY AUTO_INCREMENT,
+	name varchar(255) UNIQUE,
+  location varchar(255) NOT NULL
+)
+
+INSERT INTO lecturer (name, location) VALUES
+("Kevin", "Taiwan"),
+("Steven", "US")
+
+// checking errors
+INSERT INTO lecturer (name, location) VALUES ("Kevin", "Mexico") // error
+INSERT INTO lecturer (name, location) VALUES ("Budi", "") // not error
+INSERT INTO lecturer (name) values ("Ryan") // error
+
+SELECT * FROM students
+
+// go to 14.8 mysql documentation
+SELECT CONCAT(CONCAT(name, " has GPA "), gpa) AS "Student With GPA" FROM students
+SELECT UPPER(name) FROM students
+SELECT LOWER(name) FROM students
+SELECT SUBSTRING(name, 1, 4) FROM students
+
+// go to 14.7 mysql documentation
+SELECT CURDATE()
+SELECT DAYNAME(joined) FROM students
+SELECT DAY(joined) FROM students
+SELECT MONTH(joined) FROM students
+SELECT YEAR(joined) FROM students
+SELECT DATEDIFF(joined, "2022-02-20") FROM students
+
+CREATE TABLE officer (
+	id int primary key AUTO_INCREMENT,
+  name varchar(255),
+  work_id int
+)
+
+CREATE TABLE workplace (
+	id int PRIMARY KEY AUTO_INCREMENT,
+  name varchar(255)
+)
+
+INSERT INTO workplace (id, name) VALUES
+(1, 'Police Department'),
+(2, 'Fire Department'),
+(3, 'City Hall');
+
+INSERT INTO officer (id, name, work_id) VALUES
+(1, 'John Doe', 1),
+(2, 'Jane Smith', 2),
+(3, 'Mike Johnson', NULL),
+(4, 'Alice Brown', 4);
+
+SELECT officer.id, officer.name AS officer_name, workplace.name AS workplace_name
+FROM officer
+LEFT JOIN workplace ON officer.work_id = workplace.id;
+
+SELECT officer.id, officer.name AS officer_name, workplace.name AS workplace_name
+FROM officer
+RIGHT JOIN workplace ON officer.work_id = workplace.id;
+
+SELECT officer.id, officer.name AS officer_name, workplace.name AS workplace_name
+FROM officer
+INNER JOIN workplace ON officer.work_id = workplace.id;
