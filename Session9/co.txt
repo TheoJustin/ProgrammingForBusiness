@@ -1,0 +1,26 @@
+Session 9: PHP Session & Cookie
+
+PHP Session
+- start session
+- set session
+- get session
+- unset session
+- destroy session
+
+PHP Cookie
+- setcookie()
+- $\_COOKIE
+- expire time
+- delete cookie
+
+Session vs Cookie
+- perbedaan penyimpanan
+- perbedaan keamanan
+- perbedaan masa berlaku
+
+Implementasi Form
+- form register (HTML + PHP)
+- form login (HTML + PHP)
+- simpan data sementara (session/cookie)
+- redirect setelah login
+- logout dengan session destroy

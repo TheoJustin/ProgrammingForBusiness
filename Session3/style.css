@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  padding: 15px;
+  margin: 15px;
+  border-radius: 5px;
+}
+
+h2 {
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 5px;
+}
+
+/* --- 1. BOX MODEL & BOX SIZING --- */
+.box {
+  width: 250px;
+  height: 100px;
+  color: white;
+  padding: 10px;
+  border: 5px solid #28a745;
+  margin: 10px;
+}
+
+.content-box {
+  box-sizing: content-box;
+  background-color: #dc3545;
+}
+
+.border-box {
+  box-sizing: border-box;
+  background-color: #007bff;
+}
+
+/* --- 2. DISPLAY PROPERTY --- */
+.display-box {
+  padding: 10px;
+  border: 1px solid #333;
+  margin: 5px;
+}
+
+.d-block {
+  display: block;
+  background-color: #ffc107;
+}
+
+.d-inline {
+  display: inline;
+  background-color: #17a2b8;
+}
+
+.d-inline-block {
+  display: inline-block;
+  background-color: #fd7e14;
+  width: 200px;
+  height: 50px;
+}
+
+/* --- 3. POSITION PROPERTY --- */
+.position-relative {
+  position: relative;
+  height: 250px;
+}
+
+.position-box {
+  width: 120px;
+  height: 120px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.static {
+  position: static;
+  background-color: #6c757d;
+}
+
+.relative {
+  position: relative;
+  background-color: #28a745;
+  top: 20px;
+  left: 20px;
+}
+
+.absolute {
+  position: absolute;
+  background-color: #dc3545;
+  top: 0; /* 0px dari atas parent (.position-relative) */
+  right: 0; /* 0px dari kanan parent (.position-relative) */
+}
+
+.fixed {
+  position: fixed;
+  background-color: #6f42c1;
+  bottom: 10px;
+  right: 10px;
+  z-index: 100;
+}
+
+.position-sticky {
+  position: sticky;
+  top: 0;
+  background-color: #0056b3;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  z-index: 100;
+}
+
+/* --- 4. PSEUDO-CLASS --- */
+.link {
+  color: #007bff;
+}
+.link:visited {
+  color: #6f42c1;
+}
+
+.input-fokus:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+.tombol {
+  padding: 10px 15px;
+  border: 1px solid #28a745;
+  background-color: #28a745;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.tombol:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+.tombol:active {
+  background-color: #1e7e34;
+  transform: translateY(1px);
+}

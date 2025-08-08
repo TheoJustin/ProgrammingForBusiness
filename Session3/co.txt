@@ -1,0 +1,76 @@
+Session 3: CSS
+Internal and External CSS
+- internal style
+- external style
+
+CSS Selector
+- universal selector
+- element selector
+- class selector
+- id selector
+- group selector
+- descendant selector
+- child selector
+- adjacent sibling selector
+- general sibling selector
+- attribute selector
+- pseudo-class selector
+
+CSS Box Property
+- content
+- padding
+- border
+- margin
+- box-sizing: content-box
+- box-sizing: border-box
+
+CSS Display Property
+- display: block
+- display: inline
+- display: inline-block
+- display: flex
+- display: grid
+- display: none
+
+CSS Position Property
+- position: static
+- position: relative
+- position: absolute
+- position: fixed
+- position: sticky
+
+CSS Text Style Property
+- color
+- font-size
+- font-family
+- font-weight
+- text-align
+- line-height
+- text-decoration
+- text-transform
+- letter-spacing
+- word-spacing
+
+CSS Link
+- link styling
+- visited link
+- active link
+- hover link
+
+Hover Effect
+- :hover pseudo-class
+- transition
+- transform
+- background change
+- color change
+- scale
+
+Pseudo-class
+- :hover
+- :active
+- :focus
+- :visited
+- :first-child
+- :last-child
+- :nth-child()
+- :not()

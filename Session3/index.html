@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <title>Contoh CSS Lengkap</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      /* Style ini hanya berlaku untuk halaman ini saja */
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background-color: #f9f9f9;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Materi Konsep CSS</h1>
+
+    <section class="container">
+      <h2>1. Box Model & Box Sizing</h2>
+      <div class="box content-box">
+        <b>content-box (default):</b> Lebar total = 250px (width) + 20px
+        (padding) + 10px (border) = 280px.
+      </div>
+      <div class="box border-box">
+        <b>border-box:</b> Lebar total = 250px. Padding dan border masuk ke
+        dalam.
+      </div>
+    </section>
+
+    <section class="container">
+      <h2>2. Display Property</h2>
+      <div class="display-box d-block">Display: block</div>
+      <div class="display-box d-block">Elemen ini juga block.</div>
+      <hr />
+      <span class="display-box d-inline">Display: inline.</span>
+      <span class="display-box d-inline"
+        >Elemen ini juga inline, menyambung di baris yang sama.</span
+      >
+      <hr />
+      <div class="display-box d-inline-block">Display: inline-block.</div>
+      <div class="display-box d-inline-block">
+        Bisa diatur tinggi & lebarnya.
+      </div>
+    </section>
+
+    <section class="container position-relative">
+      <h2>3. Position Property</h2>
+      <div class="position-box static">Static (Normal)</div>
+      <div class="position-box relative">Relative (digeser sedikit)</div>
+      <div class="position-box absolute">Absolute</div>
+      <div class="position-box fixed">Fixed</div>
+    </section>
+
+    <header class="position-sticky">
+      Ini adalah header sticky. Coba scroll ke bawah.
+    </header>
+
+    <section class="container">
+      <h2>4. Pseudo-class</h2>
+      <a href="#" class="link">Link ini belum dikunjungi</a>
+      <a href="https://www.google.com" target="_blank" class="link"
+        >Link ke Google (klik untuk jadi visited)</a
+      >
+      <br /><br />
+      <input
+        type="text"
+        class="input-fokus"
+        placeholder="Klik di sini (focus)"
+      />
+      <br /><br />
+      <button class="tombol">
+        Arahkan Kursor (hover) & Klik Saya (active)
+      </button>
+    </section>
+
+    <div
+      style="
+        height: 800px;
+        background-color: #e0e0e0;
+        margin-top: 20px;
+        padding: 10px;
+      "
+    >
+      Area panjang untuk scrolling...
+    </div>
+  </body>
+</html>

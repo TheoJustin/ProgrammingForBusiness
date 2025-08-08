@@ -1,0 +1,42 @@
+Session 7: PHP Introduction
+Introduction to Web Based Programming & Database Services
+- web programming
+- database services
+
+Server-Client Architecture
+- client
+- server
+- request
+- response
+
+Basic HTML Review
+- html
+- head
+- body
+- title
+- h1 – h6
+- p
+- a
+- img
+- form
+- input
+- button
+
+Basic PHP
+- `<?php ?>`
+- echo
+- comment
+- variable
+- data type
+- operator
+- if statement
+- loop (for, while)
+- combine HTML with PHP
+
+Folder Structure
+- root folder
+- index.php
+- assets/
+- includes/
+- pages/
+- config/

@@ -1,0 +1,60 @@
+Attributes
+- id
+- class
+- style
+- href
+- src
+- alt
+- title
+- type
+- value
+- placeholder
+- disabled
+- checked
+
+Semantic Tags
+- head
+- header
+- nav
+- main
+- body
+- section
+- article
+- aside
+- footer
+
+Block vs Inline Elements
+- block elements
+- inline elements
+
+Block Elements
+- div
+- p
+- pre
+- h1 - h6
+- marquee
+- ul
+- ol
+- li
+- dl
+- dt
+- dd
+
+Inline Elements
+- b
+- strong
+- i
+- em
+- u
+- sub
+- sup
+- s
+- del
+- a
+- br
+- span
+
+Media Elements
+- img
+- audio
+- video

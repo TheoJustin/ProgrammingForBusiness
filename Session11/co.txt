@@ -1,0 +1,30 @@
+Session 11: ODBC & CRUD Data
+Open Database Connectivity (ODBC)
+- konfigurasi MySQL
+- phpMyAdmin
+- create database
+- create table
+- primary key
+- foreign key
+- relationship
+
+PHP to MySQL Connection
+- mysqli_connect()
+- mysqli_query()
+- check connection
+- close connection
+
+Authentication System
+- register
+- login
+- logout
+- session
+- cookies
+- header redirect
+- display error message
+
+CRUD (Create, Read, Update, Delete)
+- View Data (SELECT)
+- Create Data (INSERT)
+- Update Data (UPDATE)
+- Delete Data (DELETE)
