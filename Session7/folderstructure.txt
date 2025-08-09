@@ -1,0 +1,17 @@
+project-root/
+│
+├── index.html          # Main landing page
+├── login.php           # Login form & logic
+├── register.php        # Registration form & logic
+│
+├── assets/             # All static files
+│   ├── css/            # Stylesheets
+│   │   └── style.css
+│   ├── js/             # JavaScript files
+│   │   └── script.js
+│   └── images/         # Images (logo, backgrounds, etc.)
+│
+└── utils/           # Reusable PHP code (optional)
+    ├── db.php          # Database connection
+    └── functions.php   # Helper functions
+

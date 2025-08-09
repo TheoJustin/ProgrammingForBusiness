@@ -1,0 +1,57 @@
+/* Style dasar untuk semua kotak */
+.box {
+  background: lightblue;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 5px;
+}
+
+/* Block: selalu mulai di baris baru, lebar penuh */
+.block {
+  display: block;
+  background: lightgreen;
+}
+
+/* Inline: sejajar, hanya selebar konten */
+.inline {
+  display: inline;
+  background: lightcoral;
+}
+
+/* Inline-block: sejajar tapi bisa atur ukuran */
+.inline-block {
+  display: inline-block;
+  width: 100px;
+  height: 50px;
+  background: lightpink;
+}
+
+/* None: hilang sama sekali */
+.none {
+  display: none;
+  background: lightgray;
+}
+
+/* Flex layout */
+.flex-container {
+  display: flex;
+  gap: 10px;
+  background: #f0e68c;
+  padding: 10px;
+}
+.flex-container .box {
+  flex: 1;
+  text-align: center;
+}
+
+/* Grid layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  background: #d8bfd8;
+  padding: 10px;
+}
+.grid-container .box {
+  text-align: center;
+}
