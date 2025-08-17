@@ -3,14 +3,19 @@ include 'users.php';
 
 $message = '';
 
+if (isset($_SESSION['logged_in_user'])) {
+    header('Location: index.php');
+    exit;
+}
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = trim($_POST['username']);
     $password = trim($_POST['password']);
 
     if ($username && $password) {
         if (!isset($_SESSION['users'][$username])) {
-            $_SESSION['users'][$username] = $password;
-            $message = "Registration successful! <a href='login.php'>Login here</a>";
+            $_SESSION['users'][$username] = $password; //dictionary username:password
+            $message = "Registration successful!";
         } else {
             $message = "Username already taken!";
         }
@@ -25,4 +30,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     Password: <input type="password" name="password"><br><br>
     <button type="submit">Register</button>
 </form>
+<a href='login.php'>Login here</a>
 <p><?php echo $message; ?></p>

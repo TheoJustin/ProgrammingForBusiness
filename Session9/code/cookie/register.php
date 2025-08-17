@@ -1,22 +1,20 @@
 <?php
-include 'users.php';
-
 $message = '';
-$usersFile = 'user.json';
-
-// Load existing users
-if (file_exists($usersFile)) {
-    $users = json_decode(file_get_contents($usersFile), true);
-}
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = trim($_POST['username']);
     $password = trim($_POST['password']);
 
     if ($username && $password) {
+        // Load existing users from cookie
+        $users = isset($_COOKIE['users']) ? json_decode($_COOKIE['users'], true) : [];
+
         if (!isset($users[$username])) {
             $users[$username] = $password;
-            file_put_contents($usersFile, json_encode($users));
+
+            // Save back to cookie (expire in 1 hour)
+            setcookie('users', json_encode($users), time() + 3600, "/");
+
             $message = "Registration successful! <a href='login.php'>Login here</a>";
         } else {
             $message = "Username already taken!";

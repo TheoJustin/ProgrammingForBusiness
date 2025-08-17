@@ -1,4 +1,4 @@
 <?php
-setcookie('logged_in_user', '', time() - 3600, "/"); // Expire the cookie
+setcookie('logged_in_user', '', time() - 3600, "/");
 header('Location: login.php');
 exit;

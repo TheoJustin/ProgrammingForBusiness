@@ -18,7 +18,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['username'] = $username;
 
         if ($remember) {
-            setcookie("remember_user", $username, time() + 86400 * 30, "/");
+            setcookie("remember_user_id", $id, time() + 86400 * 30, "/");
+            setcookie("remember_username", $username, time() + 86400 * 30, "/");
         }
         header("Location: posts.php");
         exit;

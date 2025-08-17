@@ -1,4 +1,12 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <?php
 // =====================
 // Basic PHP Tutorial
 // =====================
@@ -17,7 +25,7 @@ echo "Halo, dunia!<br>";
 
 // ----- 3. VARIABLES -----
 $nama = "Budi";
-$umur = 20;
+$umur = 15;
 $tinggi = 170.5;
 
 echo "Nama: $nama<br>";
@@ -39,8 +47,29 @@ echo "Modulus: " . ($a % $b) . "<br>";      // 1
 echo "<br><b>If Statement:</b><br>";
 if ($umur >= 18) {
     echo "Kamu sudah dewasa.<br>";
-} else {
+} else if ($umur >= 12){
     echo "Kamu masih remaja.<br>";
+} else{
+    echo "Kamu masih anak anak. <br>";
+}
+
+$day = "Monday";
+
+switch ($day) {
+    case "Monday":
+        echo "Today is Monday!";
+        break;
+
+    case "Tuesday":
+        echo "Today is Tuesday!";
+        break;
+
+    case "Wednesday":
+        echo "Today is Wednesday!";
+        break;
+
+    default:
+        echo "It's another day.";
 }
 
 // ----- 6. LOOP -----
@@ -65,3 +94,6 @@ foreach ($buah as $b) {
     echo "Buah: $b<br>";
 }
 ?>
+
+</body>
+</html>
