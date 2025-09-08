@@ -1,14 +1,9 @@
 <?php
-$host = "localhost";
-$user = "root";
-$pass = "";
-$dbname = "demo_app";
-
-$conn = mysqli_connect($host, $user, $pass);
+include 'utils/db.php';
 
 // Create database if not exists
-mysqli_query($conn, "CREATE DATABASE IF NOT EXISTS $dbname");
-mysqli_select_db($conn, $dbname);
+// mysqli_query($conn, "CREATE DATABASE IF NOT EXISTS $dbname");
+// mysqli_select_db($conn, $dbname);
 
 // Create users table
 $createUsers = "

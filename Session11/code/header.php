@@ -24,7 +24,7 @@ if (!isset($_SESSION['user_id']) && isset($_COOKIE['remember_user_id'])) {
 <nav>
     <?php if (isset($_SESSION['user_id'])): ?>
         Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?> |
-        <a href="posts.php">Posts</a>
+        <a href="index.php">Posts</a>
         <a href="logout.php">Logout</a>
     <?php else: ?>
         <a href="login.php">Login</a>

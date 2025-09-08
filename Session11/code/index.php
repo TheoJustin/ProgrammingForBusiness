@@ -41,14 +41,23 @@ $result = mysqli_stmt_get_result($stmt);
 ?>
 <h2>Your Posts</h2>
 <table border="1" cellpadding="5">
-<tr><th>ID</th><th>Title</th><th>Actions</th></tr>
-<?php while ($row = mysqli_fetch_assoc($result)): ?>
+<tr>
+    <th>ID</th>
+    <th>Title</th>
+    <th>Actions</th>
+</tr>
+<!-- ini akan fetch next row sampe habis -->
+<?php while ($row = mysqli_fetch_assoc($result)): ?> 
 <tr>
     <td><?php echo $row['postId']; ?></td>
     <td><?php echo htmlspecialchars($row['title']); ?></td>
     <td>
-        <a href="?delete=<?php echo $row['postId']; ?>" onclick="return confirm('Delete this post?')">Delete</a>
-        <a href="#" onclick="editPost(<?php echo $row['postId']; ?>, '<?php echo htmlspecialchars($row['title']); ?>')">Edit</a>
+        <a href="?delete=<?php echo $row['postId']; ?>" onclick="return confirm('Delete this post?')">
+            Delete
+        </a>
+        <a href="#" onclick="editPost(<?php echo $row['postId']; ?>, '<?php echo htmlspecialchars($row['title']); ?>')">
+            Edit
+        </a>
     </td>
 </tr>
 <?php endwhile; ?>
